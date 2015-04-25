@@ -14,4 +14,5 @@ The documentation and further readings below is the result of the ENArC - VdU co
 * [Compiling and Depolying Source Code](https://github.com/HKIKoeln/MOM-CA/wiki/Compiling-and-Deploying-Source-Code)
 
 ## Further Reading
-* [Irmgard Fees, Claudia Märtl, Enno Bünz, Michael Menzel, Andreas Hedwig, Franz Fuchs, Hedwig Röckelein, Manfred Thaller. 2013. Urkundendigitalisierung und Mittelalterforschung]()
+* [Jochen Graf. 2014. A _JavaScript Framework vor Visual and Native XML Editors_, Magister Thesis, Faculty of Arts and Humanities, University of Cologne]()
+* [Irmgard Fees, Claudia Märtl, Enno Bünz, Michael Menzel, Andreas Hedwig, Franz Fuchs, Hedwig Röckelein, Manfred Thaller. 2013. _Urkundendigitalisierung und Mittelalterforschung_. Expert Workhsop 2012/5/25, Marbug.]()
