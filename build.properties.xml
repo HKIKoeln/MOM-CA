@@ -4,21 +4,21 @@
   <!-- ################################ XRX Project Settings ################################ -->
   <project-name>mom</project-name>
   <deploy>core/**,mom/**</deploy>
-  <password></password>
+  <password>admin</password>
 
 
   <!-- ################################ Java Settings ################################ -->
   <java>
     <initmemory>256</initmemory>
-    <maxmemory>6144</maxmemory>
+    <maxmemory>512</maxmemory>
   </java>
 
 
   <!-- ################################ eXist Settings ################################ -->
   <exist>
-    <cache-size>256</cache-size>
-    <collection-cache>256</collection-cache>
-    <lucene-buffer>256</lucene-buffer>
+    <cache-size>64</cache-size>
+    <collection-cache>64</collection-cache>
+    <lucene-buffer>64</lucene-buffer>
     <backup-cron-trigger>0 0 4 * * ?</backup-cron-trigger>
     <revision></revision>
   </exist>
