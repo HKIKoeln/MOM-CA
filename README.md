@@ -6,6 +6,7 @@ MOM-CA ist the digital archive software of the [Monasterium.net](http://www.mona
 * [Installation](https://github.com/HKIKoeln/MOM-CA/wiki/Installation)
 * [Configuration](https://github.com/HKIKoeln/MOM-CA/wiki/Configuration)
 * [Development Environment](https://github.com/HKIKoeln/MOM-CA/wiki/Development-Environment)
-* [Project Structure](https://github.com/HKIKoeln/MOM-CA/wiki/Project Structure)
+* [Project Structure](https://github.com/HKIKoeln/MOM-CA/wiki/Project-Structure)
+* [Project Structure](https://github.com/HKIKoeln/MOM-CA/wiki/Compiling-and-Deploying-Source-Code)
 
 ## Further Reading
