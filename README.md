@@ -4,7 +4,7 @@ MOM-CA ist the digital archive software of the [Monasterium.net](http://www.mona
 
 In 2012 and 2013, there was a cooperation between ENArC and the DFG funded project Virtual German Charter Network (VdU).
 
-The Documentation and further readings below is the output of the cooperation between the ENArC and the VdU project.
+The documentation and further readings below is the result of the ENArC - VdU cooperation.
 
 ## Documentation
 * [Installation](https://github.com/HKIKoeln/MOM-CA/wiki/Installation)
