@@ -23,7 +23,7 @@ The documentation and further readings below is the result of this cooperation.
 * [Translation Tool](https://github.com/HKIKoeln/MOM-CA/wiki/Translation-Tool)
 
 ## Further Reading
-* [Jochen Graf. 2014. _A JavaScript Framework vor Visual and Native XML Editors_. Magister Thesis, Faculty of Arts and Humanities, University of Cologne.]()
+* [Jochen Graf. 2014. _A JavaScript Framework vor Visual and Native XML Editors_. Magister Thesis, Faculty of Arts and Humanities, University of Cologne.](https://raw.githubusercontent.com/HKIKoeln/MOM-CA/master/wiki/AJavaScriptFrameworkForNativeAndVisualXMLEditors.pdf)
 * [Daniel Ebner. 2013. XRXEditor - ein generischer schemabasierter XForms-Editor.]()
 * [Irmgard Fees, Claudia Märtl, Enno Bünz, Michael Menzel, Andreas Hedwig, Franz Fuchs, Hedwig Röckelein, Manfred Thaller. 2013. _Urkundendigitalisierung und Mittelalterforschung_. Expert Workhsop 2012/5/25, Marbug.]()
 * [Daniel Ebner, Jochen Graf, Manfred Thaller. 2011. _Virtual German Charter Network: A Virtual Research Environment for the handling of medieval charters_.] ()
