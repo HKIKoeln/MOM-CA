@@ -1,6 +1,6 @@
 Monasterium Collaborative Archive (MOM-CA)
 ======
-MOM-CA ist the digital archive software of the [Monasterium.net](http://www.monasterium.net) project. MOM-CA was developed by HKI Cologne between 2010 and 2014 as part of the [ENArC](http://enarc.icar-us.eu/) project. Since 2014, the platform is further maintained by [ICARUS](https://github.com/icaruseu/mom-ca).
+MOM-CA ist the digital archive software of the [Monasterium.net](http://www.monasterium.net) project. MOM-CA was developed by HKI Cologne between 2011 and 2014 as part of the [ENArC](http://enarc.icar-us.eu/) project. Since 2014, the platform is further maintained by [ICARUS](https://github.com/icaruseu/mom-ca).
 
 In 2012 and 2013, there was a cooperation between ENArC and the DFG funded project Virtual German Charter Network (VdU).
 
@@ -14,3 +14,4 @@ The documentation and further readings below is the result of the ENArC - VdU co
 * [Compiling and Depolying Source Code](https://github.com/HKIKoeln/MOM-CA/wiki/Compiling-and-Deploying-Source-Code)
 
 ## Further Reading
+* [Irmgard Fees, Claudia Märtl, Enno Bünz, Michael Menzel, Andreas Hedwig, Franz Fuchs, Hedwig Röckelein, Manfred Thaller. 2013. Urkundendigitalisierung und Mittelalterforschung]()
