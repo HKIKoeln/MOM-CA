@@ -22,5 +22,35 @@
 	<classpathentry kind="lib" path="localhost/lib/user/yuicompressor-2.4.7.jar"/>
 	<classpathentry kind="lib" path="localhost/lib/extensions/exist-modules.jar"/>
 	<classpathentry kind="lib" path="localhost/lib/core/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="my/eXist/lib/endorsed/cupv10k-runtime.jar"/>
+	<classpathentry kind="lib" path="my/eXist/lib/endorsed/org.eclipse.wst.xml.xpath2.processor_1.1.0.jar"/>
+	<classpathentry kind="lib" path="my/eXist/lib/endorsed/xercesImpl-2.11.0.jar"/>
+	<classpathentry kind="lib" path="my/eXist/lib/user/avalon-framework-4.2.0.jar"/>
+	<classpathentry kind="lib" path="my/eXist/lib/user/batik-all-1.7.jar"/>
+	<classpathentry kind="lib" path="my/eXist/lib/user/fop.jar"/>
+	<classpathentry kind="lib" path="my/eXist/lib/user/poi-3.9-20121203.jar"/>
+	<classpathentry kind="lib" path="my/eXist/lib/user/xmlgraphics-commons-1.5.jar"/>
+	<classpathentry kind="lib" path="my/eXist/lib/user/yuicompressor-2.4.7.jar"/>
+	<classpathentry kind="lib" path="localhost/lib/user/3dm-0.1.5b1.jar"/>
+	<classpathentry kind="lib" path="localhost/lib/user/activation-1.1.1.jar"/>
+	<classpathentry kind="lib" path="localhost/lib/user/activation-LICENSE.txt"/>
+	<classpathentry kind="lib" path="localhost/lib/user/batik-all-1.7.jar"/>
+	<classpathentry kind="lib" path="localhost/lib/user/exificient-0.8.jar"/>
+	<classpathentry kind="lib" path="localhost/lib/user/exificient-LICENSE.txt"/>
+	<classpathentry kind="lib" path="localhost/lib/user/findbugs-0.9.4-ant.jar"/>
+	<classpathentry kind="lib" path="localhost/lib/user/findbugs-0.9.4-bcel.jar"/>
+	<classpathentry kind="lib" path="localhost/lib/user/findbugs-0.9.4-coreplugin.jar"/>
+	<classpathentry kind="lib" path="localhost/lib/user/findbugs-0.9.4-dom4j-full.jar"/>
+	<classpathentry kind="lib" path="localhost/lib/user/findbugs-0.9.4.jar"/>
+	<classpathentry kind="lib" path="localhost/lib/user/junit-3.8.1.jar"/>
+	<classpathentry kind="lib" path="localhost/lib/user/mail-1.4.4.jar"/>
+	<classpathentry kind="lib" path="localhost/lib/user/mail-LICENSE.txt"/>
+	<classpathentry kind="lib" path="localhost/lib/user/nekohtml-1.9.15.jar"/>
+	<classpathentry kind="lib" path="localhost/lib/user/nekohtml-LICENSE.txt"/>
+	<classpathentry kind="lib" path="localhost/lib/user/proguard-3.5.jar"/>
+	<classpathentry kind="lib" path="localhost/lib/user/README"/>
+	<classpathentry kind="lib" path="localhost/lib/user/xmldiff.jar"/>
+	<classpathentry kind="lib" path="localhost/lib/user/xmlgraphics-commons-1.5.jar"/>
+	<classpathentry kind="lib" path="localhost/lib/user/xmlpull-1.1.3.4a.jar"/>
 	<classpathentry kind="output" path="test/classes"/>
 </classpath>

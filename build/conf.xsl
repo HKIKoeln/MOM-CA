@@ -67,6 +67,7 @@
       <module class="org.exist.xquery.modules.file.FileModule" uri="http://exist-db.org/xquery/file"/>
       <module class="org.exist.xquery.modules.mail.MailModule" uri="http://exist-db.org/xquery/mail"/>
       <module class="org.exist.xquery.modules.excel.ExcelModule" uri="http://exist-db.org/xquery/excel"/>
+      <module class="org.exist.xquery.modules.fuego.FuegoModule" uri="https://github.com/ept/fuego-diff"/>
       <module class="org.exist.xquery.modules.image.ImageModule" uri="http://exist-db.org/xquery/image"/>
       <module class="org.exist.xquery.modules.minify.MinifyModule" uri="http://exist-db.org/xquery/minify"/>
       <module uri="http://exist-db.org/xquery/datetime" class="org.exist.xquery.modules.datetime.DateTimeModule"/>
