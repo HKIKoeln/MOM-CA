@@ -53,47 +53,48 @@ import org.xml.sax.XMLReader;
 public class FuegoDiff extends BasicFunction {
 
     @SuppressWarnings("unused")
-	private final static Logger logger = Logger.getLogger(FuegoDiff.class);
-	
-	public final static FunctionSignature signature =
-			new FunctionSignature(
-					new QName("diff", FuegoModule.NAMESPACE_URI, FuegoModule.PREFIX),
-					"returns a string describing the XML difference.",
-					new SequenceType[] { 
-						new FunctionParameterSequenceType("input1", Type.ELEMENT, Cardinality.EXACTLY_ONE, "base version"),
-						new FunctionParameterSequenceType("input2", Type.ELEMENT, Cardinality.EXACTLY_ONE, "modified version")
-						},
-					new FunctionReturnSequenceType(Type.DOCUMENT, Cardinality.EXACTLY_ONE, "an XML document describing the XML difference."));
+    private final static Logger logger = Logger.getLogger(FuegoDiff.class);
+    
+    public final static FunctionSignature signature =
+            new FunctionSignature(
+                    new QName("diff", FuegoModule.NAMESPACE_URI, FuegoModule.PREFIX),
+                    "returns a string describing the XML difference.",
+                    new SequenceType[] { 
+                        new FunctionParameterSequenceType("input1", Type.ELEMENT, Cardinality.EXACTLY_ONE, "base version"),
+                        new FunctionParameterSequenceType("input2", Type.ELEMENT, Cardinality.EXACTLY_ONE, "modified version"),
+                        new FunctionParameterSequenceType("encoder", Type.STRING, Cardinality.EXACTLY_ONE, "modified version")
+                        },
+                    new FunctionReturnSequenceType(Type.DOCUMENT, Cardinality.EXACTLY_ONE, "an XML document describing the XML difference."));
 
-	public FuegoDiff(XQueryContext context, FunctionSignature signature) {
-		super(context, signature);
-	}
-	
-	public Sequence eval(Sequence[] args, Sequence contextSequence) throws XPathException {
-		ValueSequence result = new ValueSequence();
-		ByteArrayOutputStream diffResult = new ByteArrayOutputStream();
-		
-		// is argument the empty sequence?
-		if (args[0].isEmpty()) {
-			return Sequence.EMPTY_SEQUENCE;
-		}
+    public FuegoDiff(XQueryContext context, FunctionSignature signature) {
+        super(context, signature);
+    }
+    
+    public Sequence eval(Sequence[] args, Sequence contextSequence) throws XPathException {
+        ValueSequence result = new ValueSequence();
+        ByteArrayOutputStream diffResult = new ByteArrayOutputStream();
+        
+        // is argument the empty sequence?
+        if (args[0].isEmpty()) {
+            return Sequence.EMPTY_SEQUENCE;
+        }
 
-		String ver0_string = serialize(args[0].iterate());
-		String ver1_string = serialize(args[1].iterate());
-		
-		InputStream ver0 = new ByteArrayInputStream(ver0_string.getBytes());
-		InputStream ver1 = new ByteArrayInputStream(ver1_string.getBytes());
+        String ver0_string = serialize(args[0].iterate());
+        String ver1_string = serialize(args[1].iterate());
+        
+        InputStream ver0 = new ByteArrayInputStream(ver0_string.getBytes());
+        InputStream ver1 = new ByteArrayInputStream(ver1_string.getBytes());
 
-		try {
-			Diff.diff(ver0, ver1, diffResult);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+        try {
+            Diff.diff(ver0, ver1, diffResult);
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
 
-		result.add(parse(diffResult.toString()).itemAt(0));
-		return result;
-	}
+        result.add(parse(diffResult.toString()).itemAt(0));
+        return result;
+    }
 
     private Sequence parse(String xmlContent) throws XPathException {
 
@@ -139,11 +140,11 @@ public class FuegoDiff extends BasicFunction {
         }
         
         if (report.isValid())
-        	return (DocumentImpl) adapter.getDocument();
+            return (DocumentImpl) adapter.getDocument();
         else {
-        	MemTreeBuilder builder = context.getDocumentBuilder();
+            MemTreeBuilder builder = context.getDocumentBuilder();
             NodeImpl result = Shared.writeReport(report, builder);
-    		throw new XPathException(this, ErrorCodes.EXXQDY0002, report.toString(), result);
+            throw new XPathException(this, ErrorCodes.EXXQDY0002, report.toString(), result);
         }
     }
 
@@ -169,8 +170,8 @@ public class FuegoDiff extends BasicFunction {
             
             while(siNode.hasNext())
             {
-        	   NodeValue next = (NodeValue)siNode.nextItem();
-               serializer.toSAX(next);	
+               NodeValue next = (NodeValue)siNode.nextItem();
+               serializer.toSAX(next);    
             }
             
             sax.endDocument();
@@ -188,15 +189,15 @@ public class FuegoDiff extends BasicFunction {
         {
             SerializerPool.getInstance().returnObject(sax);
         }
-    	try
-    	{
-    		String encoding = outputProperties.getProperty(OutputKeys.ENCODING, "UTF-8");
-    		return new String(((ByteArrayOutputStream)os).toByteArray(), encoding);
-    	}
-    	catch(UnsupportedEncodingException e)
-    	{
-    		throw new XPathException(this, "A problem occurred while serializing the node set: " + e.getMessage(), e);
-    	}
+        try
+        {
+            String encoding = outputProperties.getProperty(OutputKeys.ENCODING, "UTF-8");
+            return new String(((ByteArrayOutputStream)os).toByteArray(), encoding);
+        }
+        catch(UnsupportedEncodingException e)
+        {
+            throw new XPathException(this, "A problem occurred while serializing the node set: " + e.getMessage(), e);
+        }
     }
-	
+    
 }
