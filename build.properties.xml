@@ -2,8 +2,8 @@
 <!-- @author: Jochen Graf -->
 <XRX>
   <!-- ########## XRX Project Settings ########## -->
-  <project-name>mom</project-name>
-  <deploy>core/**,mom/**</deploy>
+  <project-name>test</project-name>
+  <deploy>core/**,test/**</deploy>
   <password>admin</password>
 
   <!-- ########## OS Settings ########## -->

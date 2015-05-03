@@ -1,0 +1,15 @@
+<xrx:portal xmlns="http://www.w3.org/1999/xhtml" xmlns:xrx="http://www.monasterium.net/NS/xrx">
+  <xrx:id>tag:www.monasterium.net,2011:/test/portal/empty</xrx:id>
+  <xrx:author>jochen.graf@uni-koeln.de</xrx:author>
+  <xrx:licence></xrx:licence>
+  <xrx:csss>
+    <style type="text/css">
+ 
+    </style>
+  </xrx:csss>  
+  <xrx:view>
+    <div id="main">
+      <xrx:mainwidget/>
+    </div>
+  </xrx:view>
+</xrx:portal>

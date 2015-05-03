@@ -1,0 +1,37 @@
+<xrx:app xmlns:xrx="http://www.monasterium.net/NS/xrx">
+  <xrx:id>tag:www.monasterium.net,2011:/test/app/i18n</xrx:id>
+  <xrx:inherits>tag:www.monasterium.net,2011:/core/app/i18n</xrx:inherits>
+  <xrx:title>
+    <xrx:i18n>
+      <xrx:key />
+      <xrx:default />
+    </xrx:i18n>
+  </xrx:title>
+  <xrx:subtitle />
+  <xrx:description />
+  <xrx:author>jochen.graf@uni-koeln.de</xrx:author>
+  <xrx:licence></xrx:licence>
+  <xrx:conf>
+    <xrx:param name="default-lang">eng</xrx:param>
+    <xrx:param name="xrx-i18n-db-base-uri">/db/test-data/xrx.i18n/</xrx:param>
+    <xrx:param name="xrx-i18n-atom-base-uri">/xrx.i18n/</xrx:param>
+    <xrx:param name="languages">
+      <xrx:languages>
+        <xrx:lang key="ces" old="cz" name="cesky" />
+        <xrx:lang key="deu" old="de" name="deutsch" />
+        <xrx:lang key="est" old="es" name="eesti" />
+        <xrx:lang key="eng" old="en" name="english" />
+        <xrx:lang key="spa" old="es" name="español" />
+        <xrx:lang key="fra" old="fr" name="français" />
+        <xrx:lang key="hrv" old="hr" name="hrvatski" />
+        <xrx:lang key="ita" old="it" name="italiano" />
+        <xrx:lang key="hun" old="hu" name="magyar" />
+        <xrx:lang key="pol" old="pl" name="polski" />
+        <xrx:lang key="por" old="pt" name="português" />
+        <xrx:lang key="rum" old="ro" name="română" />
+        <xrx:lang key="slv" old="si" name="slovenscina" />
+        <xrx:lang key="slk" old="sk" name="slovensky" />
+      </xrx:languages>
+    </xrx:param>
+  </xrx:conf>
+</xrx:app>

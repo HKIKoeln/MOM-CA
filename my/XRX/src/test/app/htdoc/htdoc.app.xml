@@ -1,0 +1,19 @@
+<xrx:app xmlns:xrx="http://www.monasterium.net/NS/xrx">
+  <xrx:id>tag:www.monasterium.net,2011:/test/app/htdoc</xrx:id>
+  <xrx:inherits>tag:www.monasterium.net,2011:/core/app/htdoc</xrx:inherits>
+  <xrx:title>
+    <xrx:i18n>
+      <xrx:key></xrx:key>
+      <xrx:default></xrx:default>
+    </xrx:i18n>
+  </xrx:title>
+  <xrx:subtitle></xrx:subtitle>
+  <xrx:description></xrx:description>
+  <xrx:author>jochen.graf@uni-koeln.de</xrx:author>
+  <xrx:licence></xrx:licence>
+  <xrx:conf>
+    <xrx:param name="xrx-htdoc-main-widget">tag:www.monasterium.net,2011:/mom/widget/static-htdoc</xrx:param>
+    <xrx:param name="xrx-htdoc-atom-base-uri">/xrx.htdoc/</xrx:param>
+    <xrx:param name="xrx-htdoc-db-base-uri">/db/test-data/xrx.htdoc/</xrx:param>
+  </xrx:conf>
+</xrx:app>

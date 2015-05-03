@@ -1,0 +1,29 @@
+<xrx:widget xmlns:xrx="http://www.monasterium.net/NS/xrx" xmlns="http://www.w3.org/1999/xhtml">
+  <xrx:id>tag:www.monasterium.net,2011:/test/widget/test</xrx:id>
+  <xrx:title>
+    <xrx:i18n>
+      <xrx:key>home</xrx:key>
+      <xrx:default>Home</xrx:default>
+    </xrx:i18n>
+  </xrx:title>
+  <xrx:subtitle/>
+  <xrx:description/>
+  <xrx:author>jochen.graf@uni-koeln.de</xrx:author>
+  <xrx:licence></xrx:licence>
+  <xrx:portal>tag:www.monasterium.net,2011:/test/portal/empty</xrx:portal>
+  <xrx:init>
+   <xrx:processor>
+     <xrx:xformsflag>false</xrx:xformsflag>
+   </xrx:processor>
+  </xrx:init>
+  <xrx:csss>
+    <style type="text/css">
+
+    </style>
+  </xrx:csss>
+  <xrx:view>
+    <div>
+      <h1>Test</h1>
+    </div>
+  </xrx:view>
+</xrx:widget>

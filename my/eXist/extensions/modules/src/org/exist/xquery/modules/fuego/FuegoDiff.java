@@ -58,11 +58,13 @@ public class FuegoDiff extends BasicFunction {
     public final static FunctionSignature signature =
             new FunctionSignature(
                     new QName("diff", FuegoModule.NAMESPACE_URI, FuegoModule.PREFIX),
-                    "returns a string describing the XML difference.",
+                    "returns an XML document describing the XML difference.",
                     new SequenceType[] { 
                         new FunctionParameterSequenceType("input1", Type.ELEMENT, Cardinality.EXACTLY_ONE, "base version"),
                         new FunctionParameterSequenceType("input2", Type.ELEMENT, Cardinality.EXACTLY_ONE, "modified version"),
-                        new FunctionParameterSequenceType("encoder", Type.STRING, Cardinality.EXACTLY_ONE, "modified version")
+                        new FunctionParameterSequenceType("encoderAlias", Type.STRING, Cardinality.EXACTLY_ONE, "encoder alias"),
+                        new FunctionParameterSequenceType("encoderOptions", Type.ELEMENT, Cardinality.ZERO_OR_ONE, "encoder options"),
+                        new FunctionParameterSequenceType("emitEmpty", Type.BOOLEAN, Cardinality.EXACTLY_ONE, "whether to emit empty")
                         },
                     new FunctionReturnSequenceType(Type.DOCUMENT, Cardinality.EXACTLY_ONE, "an XML document describing the XML difference."));
 

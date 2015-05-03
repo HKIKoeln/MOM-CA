@@ -68,6 +68,8 @@ declare variable $xrx:resource-db-base-collection :=
 (: for backward compatibility :)
 declare variable $xrx:db-base-collection :=
     collection($xrx:live-db-base-collection-path);
+
+declare variable $xrx:develop-flag := true();
     
 (:
     ##################

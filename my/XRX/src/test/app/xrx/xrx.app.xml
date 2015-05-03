@@ -1,0 +1,45 @@
+<xrx:app xmlns:xrx="http://www.monasterium.net/NS/xrx">
+  <xrx:id>tag:www.monasterium.net,2011:/test/app/xrx</xrx:id>
+  <xrx:inherits>tag:www.monasterium.net,2011:/core/app/xrx</xrx:inherits>
+  <xrx:title>
+    <xrx:i18n>
+      <xrx:key></xrx:key>
+      <xrx:default></xrx:default>
+    </xrx:i18n>
+  </xrx:title>
+  <xrx:subtitle></xrx:subtitle>
+  <xrx:description></xrx:description>
+  <xrx:author>jochen.graf@uni-koeln.de</xrx:author>
+  <xrx:licence></xrx:licence>
+  <xrx:resolver>
+    <xrx:map priority="1">
+        <xrx:uripattern>/atom/</xrx:uripattern>
+        <xrx:mode>atom</xrx:mode>
+    </xrx:map>
+    <xrx:map priority="1">
+        <xrx:uripattern>/css/$</xrx:uripattern>
+        <xrx:mode>css</xrx:mode>
+    </xrx:map>
+    <xrx:map priority="1">
+        <xrx:uripattern>/javascript/$</xrx:uripattern>
+        <xrx:mode>javascript</xrx:mode>
+    </xrx:map>
+    <xrx:map priority="1">
+        <xrx:uripattern>/embeddedwidget/$</xrx:uripattern>
+        <xrx:mode>embeddedwidget</xrx:mode>
+    </xrx:map>
+    <xrx:map priority="1">
+        <xrx:uripattern>/resource/$</xrx:uripattern>
+        <xrx:mode>resource</xrx:mode>
+    </xrx:map>
+  </xrx:resolver>
+  <xrx:conf>
+    <xrx:param name="xrx-src-db-base-collection-path">/db/XRX.src</xrx:param>
+    <xrx:param name="xrx-live-db-base-collection-path">/db/XRX.live</xrx:param>
+    <xrx:param name="css-request-base-uri">/test/css/</xrx:param>
+    <xrx:param name="xrx-platform-db-base-uri">/db/XRX.live/test/</xrx:param>
+    <xrx:param name="xrx-user-db-base-uri">/db/test-data/xrx.user/</xrx:param>
+    <xrx:param name="data-db-base-uri">/db/mom-data/</xrx:param>
+    <xrx:param name="saved-data-atom-base-uri">/metadata.charter.saved/</xrx:param>
+  </xrx:conf>
+</xrx:app>

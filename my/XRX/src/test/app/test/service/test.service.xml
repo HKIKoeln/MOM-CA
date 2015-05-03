@@ -1,0 +1,25 @@
+<xrx:service xmlns:xrx="http://www.monasterium.net/NS/xrx">
+  <xrx:id>tag:www.monasterium.net,2011:/test/service/test</xrx:id>
+  <xrx:title>
+    <xrx:i18n>
+      <xrx:key></xrx:key>
+      <xrx:default></xrx:default>
+    </xrx:i18n>
+  </xrx:title>
+  <xrx:subtitle></xrx:subtitle>
+  <xrx:description></xrx:description>
+  <xrx:author>jochen.graf@uni-koeln.de</xrx:author>
+  <xrx:licence></xrx:licence>
+  <xrx:init>
+   <xrx:processor>
+     <xrx:translateflag>true</xrx:translateflag>
+   </xrx:processor>
+  </xrx:init>
+  <xrx:body>
+  {
+    let $x := 1
+    return
+    ()
+  }
+  </xrx:body>
+</xrx:service>

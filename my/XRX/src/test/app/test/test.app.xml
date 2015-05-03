@@ -1,0 +1,58 @@
+<xrx:app xmlns:xrx="http://www.monasterium.net/NS/xrx">
+  <xrx:id>tag:www.monasterium.net,2011:/test/app/test</xrx:id>
+  <xrx:title>
+    <xrx:i18n>
+      <xrx:key/>
+      <xrx:default/>
+    </xrx:i18n>
+  </xrx:title>
+  <xrx:subtitle/>
+  <xrx:description/>
+  <xrx:author>jochen.graf@uni-koeln.de</xrx:author>
+  <xrx:licence></xrx:licence>
+  <xrx:modules>
+    <xrx:module>
+      <xrx:resource>test.xqm</xrx:resource>
+      <xrx:prefix>url</xrx:prefix>
+      <xrx:uri>http://www.monasterium.net/NS/test</xrx:uri>
+    </xrx:module>
+  </xrx:modules>
+  <xrx:resources>
+    <!-- images -->
+    <xrx:resource>
+      <xrx:atomid>tag:www.monasterium.net,2011:/test/resource/image/test</xrx:atomid>
+      <xrx:relativepath>image/</xrx:relativepath>
+      <xrx:name>test.png</xrx:name>
+    </xrx:resource>
+    <!-- JavaScript -->
+    <xrx:resource>
+      <xrx:atomid>tag:www.monasterium.net,2011:/test/resource/js/test</xrx:atomid>
+      <xrx:relativepath>js/</xrx:relativepath>
+      <xrx:name>test.js</xrx:name>
+    </xrx:resource>
+    <!-- XSL -->
+    <xrx:resource>
+      <xrx:atomid>tag:www.monasterium.net,2011:/test/resource/xsl/test</xrx:atomid>
+      <xrx:relativepath>xsl/</xrx:relativepath>
+      <xrx:name>test.xsl</xrx:name>
+    </xrx:resource>
+  </xrx:resources>
+  <xrx:resolver>
+    <!-- services -->
+    <xrx:map>
+      <xrx:uripattern>/service/test$</xrx:uripattern>
+      <xrx:mode>service</xrx:mode>
+      <xrx:atomid>tag:www.monasterium.net,2011:/test/service/test</xrx:atomid>
+    </xrx:map>
+    <!-- widgets -->
+    <xrx:map>
+      <xrx:uripattern>/home$</xrx:uripattern>
+      <xrx:mode>mainwidget</xrx:mode>
+      <xrx:atomid>tag:www.monasterium.net,2011:/test/widget/test</xrx:atomid>
+    </xrx:map>
+  </xrx:resolver>
+  <xrx:conf>
+    <xrx:param name="request-root">/test/</xrx:param>
+    <xrx:param name="platform-browser-title">XRX++ Test Platform</xrx:param>
+  </xrx:conf>
+</xrx:app>

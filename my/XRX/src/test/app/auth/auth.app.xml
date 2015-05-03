@@ -1,0 +1,50 @@
+<xrx:app xmlns:xrx="http://www.monasterium.net/NS/xrx">
+  <xrx:id>tag:www.monasterium.net,2011:/test/app/auth</xrx:id>
+  <xrx:inherits>tag:www.monasterium.net,2011:/core/app/auth</xrx:inherits>
+  <xrx:title>
+    <xrx:i18n>
+      <xrx:key></xrx:key>
+      <xrx:default></xrx:default>
+    </xrx:i18n>
+  </xrx:title>
+  <xrx:subtitle></xrx:subtitle>
+  <xrx:description></xrx:description>
+  <xrx:author>jochen.graf@uni-koeln.de</xrx:author>
+  <xrx:licence></xrx:licence>
+  <xrx:conf>
+    <xrx:param name="roles">
+      <xrx:roles>
+        <xrx:role>
+          <xrx:i18n>
+            <xrx:key>moderator</xrx:key>
+            <xrx:default>Moderator</xrx:default>
+          </xrx:i18n>
+        </xrx:role>
+        <xrx:role>
+          <xrx:i18n>
+            <xrx:key>translator</xrx:key>
+            <xrx:default>Translator</xrx:default>
+          </xrx:i18n>
+        </xrx:role>
+        <xrx:role>
+          <xrx:i18n>
+            <xrx:key>html-author</xrx:key>
+            <xrx:default>Html Author</xrx:default>
+          </xrx:i18n>
+        </xrx:role>
+        <xrx:role>
+          <xrx:i18n>
+            <xrx:key>user-administrator</xrx:key>
+            <xrx:default>User Administrator</xrx:default>
+          </xrx:i18n>
+        </xrx:role>
+        <xrx:role>
+          <xrx:i18n>
+            <xrx:key>metadata-manager</xrx:key>
+            <xrx:default>Metadata manager</xrx:default>
+          </xrx:i18n>
+        </xrx:role>
+      </xrx:roles>
+    </xrx:param>
+  </xrx:conf>
+</xrx:app>
