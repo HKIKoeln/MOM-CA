@@ -17,6 +17,7 @@ The documentation and further readings below is the result of this cooperation.
 * [Compiling and Depolying Source Code](https://github.com/HKIKoeln/MOM-CA/wiki/Compiling-and-Deploying-Source-Code)
 
 ### Tools
+* [Collection Environment](https://github.com/HKIKoeln/MOM-CA/wiki/Collection-Environment)
 * [Paleographic Image Editor](https://github.com/HKIKoeln/MOM-CA/wiki/Paleographic-Image-Editor)
 * [Import Tool](https://github.com/HKIKoeln/MOM-CA/wiki/Import-Tool)
 * [OAI-PMH Interface](https://github.com/HKIKoeln/MOM-CA/wiki/OAI-PMH-Interface)
