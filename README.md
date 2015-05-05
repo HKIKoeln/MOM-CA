@@ -8,10 +8,13 @@ The documentation and further readings below is the result of this cooperation.
 
 ## Documentation
 
-### Software
+### Deployment
 
 * [Installation](https://github.com/HKIKoeln/MOM-CA/wiki/Installation)
 * [Configuration](https://github.com/HKIKoeln/MOM-CA/wiki/Configuration)
+
+### Development
+
 * [Development Environment](https://github.com/HKIKoeln/MOM-CA/wiki/Development-Environment)
 * [Project Structure](https://github.com/HKIKoeln/MOM-CA/wiki/Project-Structure)
 * [Compiling and Depolying Source Code](https://github.com/HKIKoeln/MOM-CA/wiki/Compiling-and-Deploying-Source-Code)
