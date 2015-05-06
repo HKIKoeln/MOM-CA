@@ -26,6 +26,11 @@ The documentation and further readings below is the result of this cooperation.
 * [OAI-PMH Interface](https://github.com/HKIKoeln/MOM-CA/wiki/OAI-PMH-Interface)
 * [Translation Tool](https://github.com/HKIKoeln/MOM-CA/wiki/Translation-Tool)
 
+### Developers
+* Jochen Graf
+* Daniel Ebner
+* André Streicher
+
 ## Further Reading
 * [Jochen Graf, Manfred Thaller (supervisor). 2014. _A JavaScript Framework vor Visual and Native XML Editors_. Magister Thesis, Faculty of Arts and Humanities, University of Cologne.](https://raw.githubusercontent.com/HKIKoeln/MOM-CA/master/wiki/AJavaScriptFrameworkForVisualAndNativeXMLEditors.pdf)
 * [Daniel Ebner. 2013. _XRXEditor - ein generischer schemabasierter XForms-Editor_.](https://raw.githubusercontent.com/HKIKoeln/MOM-CA/master/wiki/XRXEditor.pdf)
