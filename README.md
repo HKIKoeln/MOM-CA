@@ -33,6 +33,8 @@ The documentation and further readings below is the result of this cooperation.
 * [Collaborative Tools](https://www.youtube.com/watch?v=ziragFxGuUo)
 * [Internationalisation System](https://www.youtube.com/watch?v=A_yNtz7g2u0)
 
+All videos are kindly supported and produced by [DARIAH-DE](https://de.dariah.eu/)
+
 ### Developers
 * Jochen Graf
 * Daniel Ebner
