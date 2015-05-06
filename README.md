@@ -19,9 +19,7 @@ The documentation and further readings below is the result of this cooperation.
 * [Project Structure](https://github.com/HKIKoeln/MOM-CA/wiki/Project-Structure)
 * [Compiling and Depolying Source Code](https://github.com/HKIKoeln/MOM-CA/wiki/Compiling-and-Deploying-Source-Code)
 
-### Tools
-
-#### Descriptions
+### Tool Descriptions
 
 * [Collection Environment](https://github.com/HKIKoeln/MOM-CA/wiki/Collection-Environment)
 * [Paleographic Image Editor](https://github.com/HKIKoeln/MOM-CA/wiki/Paleographic-Image-Editor)
@@ -29,7 +27,7 @@ The documentation and further readings below is the result of this cooperation.
 * [OAI-PMH Interface](https://github.com/HKIKoeln/MOM-CA/wiki/OAI-PMH-Interface)
 * [Translation Tool](https://github.com/HKIKoeln/MOM-CA/wiki/Translation-Tool)
 
-#### Videos
+### Videos
 
 * [Public Presentation Platform](https://www.youtube.com/watch?v=fSgXP7OM2Ac)
 * [Collaborative Tools](https://www.youtube.com/watch?v=ziragFxGuUo)
