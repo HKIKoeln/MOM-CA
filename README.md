@@ -21,7 +21,7 @@ The documentation and further readings below is the result of this cooperation.
 
 ### Tools
 
-### Descriptions
+#### Descriptions
 
 * [Collection Environment](https://github.com/HKIKoeln/MOM-CA/wiki/Collection-Environment)
 * [Paleographic Image Editor](https://github.com/HKIKoeln/MOM-CA/wiki/Paleographic-Image-Editor)
