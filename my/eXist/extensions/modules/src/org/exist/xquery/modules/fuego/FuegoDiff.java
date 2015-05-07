@@ -11,6 +11,8 @@ import java.io.OutputStreamWriter;
 import java.io.StringReader;
 import java.io.UnsupportedEncodingException;
 import java.io.Writer;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -38,14 +40,14 @@ import org.exist.xquery.XQueryContext;
 import org.exist.xquery.functions.validation.Shared;
 import org.exist.xquery.value.FunctionParameterSequenceType;
 import org.exist.xquery.value.FunctionReturnSequenceType;
-import org.exist.xquery.value.Item;
 import org.exist.xquery.value.NodeValue;
 import org.exist.xquery.value.SequenceIterator;
-import org.exist.xquery.value.StringValue;
 import org.exist.xquery.value.Sequence;
 import org.exist.xquery.value.SequenceType;
 import org.exist.xquery.value.Type;
 import org.exist.xquery.value.ValueSequence;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
@@ -54,41 +56,69 @@ public class FuegoDiff extends BasicFunction {
 
     @SuppressWarnings("unused")
     private final static Logger logger = Logger.getLogger(FuegoDiff.class);
+
+    
+    
+    private boolean stopOnError = true;
+    private boolean stopOnWarn = false;
+    
+    
     
     public final static FunctionSignature signature =
             new FunctionSignature(
                     new QName("diff", FuegoModule.NAMESPACE_URI, FuegoModule.PREFIX),
-                    "returns an XML document describing the XML difference.",
+                    "Returns an XML document describing the XML difference.",
                     new SequenceType[] { 
                         new FunctionParameterSequenceType("input1", Type.ELEMENT, Cardinality.EXACTLY_ONE, "base version"),
                         new FunctionParameterSequenceType("input2", Type.ELEMENT, Cardinality.EXACTLY_ONE, "modified version"),
-                        new FunctionParameterSequenceType("encoderAlias", Type.STRING, Cardinality.EXACTLY_ONE, "encoder alias"),
+                        new FunctionParameterSequenceType("encoderAlias", Type.STRING, Cardinality.EXACTLY_ONE, "encoder alias ('xml', 'ref', 'ref:id', 'align', lowlevel)"),
                         new FunctionParameterSequenceType("encoderOptions", Type.ELEMENT, Cardinality.ZERO_OR_ONE, "encoder options"),
                         new FunctionParameterSequenceType("emitEmpty", Type.BOOLEAN, Cardinality.EXACTLY_ONE, "whether to emit empty")
                         },
-                    new FunctionReturnSequenceType(Type.DOCUMENT, Cardinality.EXACTLY_ONE, "an XML document describing the XML difference."));
+                    new FunctionReturnSequenceType(Type.DOCUMENT, Cardinality.EXACTLY_ONE, "an XML document describing the XML difference"));
 
+    
+    
     public FuegoDiff(XQueryContext context, FunctionSignature signature) {
         super(context, signature);
     }
     
+    
+    
     public Sequence eval(Sequence[] args, Sequence contextSequence) throws XPathException {
         ValueSequence result = new ValueSequence();
         ByteArrayOutputStream diffResult = new ByteArrayOutputStream();
-        
-        // is argument the empty sequence?
-        if (args[0].isEmpty()) {
-            return Sequence.EMPTY_SEQUENCE;
-        }
 
+        // transform XML documents into text representation
         String ver0_string = serialize(args[0].iterate());
         String ver1_string = serialize(args[1].iterate());
-        
         InputStream ver0 = new ByteArrayInputStream(ver0_string.getBytes());
         InputStream ver1 = new ByteArrayInputStream(ver1_string.getBytes());
+		
+		// get encoder class
+        String encoderAlias = args[2].getStringValue();
+        String encoderName = Diff.ENCODER_ALIASES.get(encoderAlias);
+        Class encoder = fc.xml.diff.encode.XmlDiffEncoder.class;
+        try {
+			encoder = encoderName != null ? Class.forName(encoderName) : null;
+		} catch (ClassNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+
+		// parse encoder options
+        Map<String, String> encoderProperties = new HashMap<String, String>();
+		Node options = null;
+		if(!args[3].isEmpty())
+			options = ((NodeValue)args[3].itemAt(0)).getNode();
+		if (options != null)
+	            parseParameters(encoderProperties, options);
+        
+		// get emitEmpty flag
+        Boolean emitEmpty = args[4].effectiveBooleanValue();
 
         try {
-            Diff.diff(ver0, ver1, diffResult);
+            Diff.diff(ver0, ver1, diffResult, null, encoder, encoderProperties, emitEmpty);
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -98,6 +128,8 @@ public class FuegoDiff extends BasicFunction {
         return result;
     }
 
+    
+    
     private Sequence parse(String xmlContent) throws XPathException {
 
         if (xmlContent.length() == 0) {
@@ -150,6 +182,8 @@ public class FuegoDiff extends BasicFunction {
         }
     }
 
+    
+    
     private String serialize(SequenceIterator siNode) throws XPathException
     {
         OutputStream os = new ByteArrayOutputStream();
@@ -178,27 +212,46 @@ public class FuegoDiff extends BasicFunction {
             
             sax.endDocument();
             writer.close();
-        }
-        catch(SAXException e)
-        {
+        } catch(SAXException e) {
+            throw new XPathException(this, "A problem occurred while serializing the node set: " + e.getMessage(), e);
+        } catch (IOException e) {
             throw new XPathException(this, "A problem occurred while serializing the node set: " + e.getMessage(), e);
         }
-        catch (IOException e)
-        {
-            throw new XPathException(this, "A problem occurred while serializing the node set: " + e.getMessage(), e);
-        }
-        finally
-        {
+        
+        finally {
             SerializerPool.getInstance().returnObject(sax);
         }
+        
         try
         {
             String encoding = outputProperties.getProperty(OutputKeys.ENCODING, "UTF-8");
             return new String(((ByteArrayOutputStream)os).toByteArray(), encoding);
-        }
-        catch(UnsupportedEncodingException e)
-        {
+        } catch(UnsupportedEncodingException e) {
             throw new XPathException(this, "A problem occurred while serializing the node set: " + e.getMessage(), e);
+        }
+    }
+    
+    
+    
+    private void parseParameters(Map<String, String> properties, Node options) throws XPathException {
+        if(options.getNodeType() == Node.ELEMENT_NODE && options.getLocalName().equals("parameters")) {
+            Node child = options.getFirstChild();
+            while(child != null) {
+                if(child.getNodeType() == Node.ELEMENT_NODE && child.getLocalName().equals("param")) {
+                    Element elem = (Element)child;
+                    String name = elem.getAttribute("name");
+                    String value = elem.getAttribute("value");
+                    if(name == null || value == null)
+                        throw new XPathException(this, "Name or value attribute missing for stylesheet parameter");
+                    if (name.equals("exist:stop-on-warn"))
+                        stopOnWarn = value.equals("yes");
+                    else if (name.equals("exist:stop-on-error"))
+                        stopOnError = value.equals("yes");
+                    else
+                        properties.put(name, value);
+                }
+                child = child.getNextSibling();
+            }
         }
     }
     

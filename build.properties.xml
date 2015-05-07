@@ -2,15 +2,14 @@
 <!-- @author: Jochen Graf -->
 <XRX>
   <!-- ########## XRX Project Settings ########## -->
-  <project-name>test</project-name>
-  <deploy>core/**,test/**</deploy>
+  <project-name>mom</project-name>
+  <deploy>core/**,mom/**</deploy>
   <password>admin</password>
 
   <!-- ########## OS Settings ########## -->
   <os>
     <windows>
-      <arch>64</arch>
-      <!--arch>32</arch-->
+      <bitness>64</bitness>
       <serviceName>mom.XRX-1</serviceName>
     </windows>
   </os>
@@ -18,14 +17,14 @@
   <!-- ########## Java Settings ########## -->
   <java>
     <initmemory>256</initmemory>
-    <maxmemory>512</maxmemory>
+    <maxmemory>6144</maxmemory>
   </java>
 
   <!-- ########## eXist Settings ########## -->
   <exist>
-    <cache-size>64</cache-size>
-    <collection-cache>64</collection-cache>
-    <lucene-buffer>64</lucene-buffer>
+    <cache-size>256</cache-size>
+    <collection-cache>256</collection-cache>
+    <lucene-buffer>256</lucene-buffer>
     <backup-cron-trigger>0 0 4 * * ?</backup-cron-trigger>
     <revision></revision>
   </exist>
