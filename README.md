@@ -38,7 +38,7 @@ The documentation and further readings below is the result of this cooperation.
 
 (All videos are kindly supported and produced by [DARIAH-DE](https://de.dariah.eu/))
 
-### Developers
+## Developers
 * Jochen Graf
 * Daniel Ebner
 * André Streicher
