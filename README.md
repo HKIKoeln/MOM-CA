@@ -40,7 +40,7 @@ The documentation and further readings below is the result of this cooperation.
 
 ### Software Architecture
 
-* [Digital Library Implementation](https://github.com/HKIKoeln/MOM-CA/wiki/Digital-Library)
+* [Digital Library Implementation](https://github.com/HKIKoeln/MOM-CA/wiki/Digital-Library-Implementation)
 
 ## Developers
 * Jochen Graf
