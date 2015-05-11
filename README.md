@@ -40,7 +40,7 @@ The documentation and further readings below is the result of this cooperation.
 
 ### Software Architecture
 
-* [MOM-CA and Digital Library Models](https://github.com/HKIKoeln/MOM-CA/wiki/MOM-CA-and-Digital-Library-Models)
+* [Digital Library](https://github.com/HKIKoeln/MOM-CA/wiki/Digital-Library)
 
 ## Developers
 * Jochen Graf
