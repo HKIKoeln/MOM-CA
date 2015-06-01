@@ -24,6 +24,7 @@ The documentation and further readings below is the result of this cooperation.
 
 ### Tool Descriptions
 
+* [Overview](https://github.com/HKIKoeln/MOM-CA/wiki/Overview)
 * [Collection Environment](https://github.com/HKIKoeln/MOM-CA/wiki/Collection-Environment)
 * [Paleographic Image Editor](https://github.com/HKIKoeln/MOM-CA/wiki/Paleographic-Image-Editor)
 * [Import Tool](https://github.com/HKIKoeln/MOM-CA/wiki/Import-Tool)
@@ -37,10 +38,6 @@ The documentation and further readings below is the result of this cooperation.
 * [Internationalisation System](https://www.youtube.com/watch?v=A_yNtz7g2u0)
 
 (All videos are kindly supported and produced by [DARIAH-DE](https://de.dariah.eu/))
-
-### Software Architecture
-
-* [Digital Library Model](https://github.com/HKIKoeln/MOM-CA/wiki/Digital-Library-Model)
 
 ## Developers
 * Jochen Graf
