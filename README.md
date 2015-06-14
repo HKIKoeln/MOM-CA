@@ -22,9 +22,12 @@ The documentation and further readings below is the result of this cooperation.
 * [Project Structure](https://github.com/HKIKoeln/MOM-CA/wiki/Project-Structure)
 * [Compiling and Depolying Source Code](https://github.com/HKIKoeln/MOM-CA/wiki/Compiling-and-Deploying-Source-Code)
 
-### Tool Descriptions
+### Software Architecture
 
 * [Overview](https://github.com/HKIKoeln/MOM-CA/wiki/Overview)
+
+### Tool Descriptions
+
 * [Collection Environment](https://github.com/HKIKoeln/MOM-CA/wiki/Collection-Environment)
 * [Paleographic Image Editor](https://github.com/HKIKoeln/MOM-CA/wiki/Paleographic-Image-Editor)
 * [Import Tool](https://github.com/HKIKoeln/MOM-CA/wiki/Import-Tool)
